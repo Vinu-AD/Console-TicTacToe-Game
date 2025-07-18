@@ -1,5 +1,3 @@
-package projects;
-
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -245,15 +243,15 @@ public class TicTacToe {
             getDetails();
             play();
             result();
-
+    
             System.out.println("Do you want to play again?\n1. Yes\n2. No");
-            while (!scan.hasNextInt()) {
-                System.out.print("Invalid input. Please enter a number:");
-                scan.nextLine();
-            }
             boolean playAgain = true;
             while(true) {
                 System.out.print("Enter: ");
+                while (!scan.hasNextInt()) {
+                    System.out.print("Invalid input. Please enter a number:");
+                    scan.nextLine();
+                }
                 int n = scan.nextInt();
                 scan.nextLine();
                 if (n == 1) {
